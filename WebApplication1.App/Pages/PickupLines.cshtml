@@ -1,0 +1,16 @@
+﻿@page "/pickupLines"
+
+<h1>Pickup Lines</h1>
+
+@foreach(var student in Students)
+{
+    <StudentStatusListItem Student="student" />
+}
+
+@functions {
+    IEnumerable<Student> Students = new List<Student>
+    {
+        new Student("Cody", "Clay"),
+        new Student("Hayley", "Clay")
+    };
+}
